@@ -4,13 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Provider from './Provider';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './Router';
 
 ReactDOM.render(
-  <Provider>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </Provider>,
+  <Provider>
+    <BrowserRouter>
+      <App>
+        <Router disableHeaderFooter={false} />
+      </App>
+    </BrowserRouter>
+  </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { FC, CSSProperties } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { QueryFunction } from './graphql';
 
-function App() {
+export interface AppProps {
+  rootStyle?: CSSProperties;
+}
+
+const App: FC<AppProps> = ({children, rootStyle}) => {
   return (
     <div className="App">
-      <header className="App-header">
+      
        <h1>BidSite</h1> 
        <QueryFunction />
-      </header>
+      
+      {children}
     </div>
   );
 }
