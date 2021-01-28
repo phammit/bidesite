@@ -20,7 +20,7 @@ export const QueryFunction = () =>  {
 
     return (
         <div className="App">
-            <h1>{data.hello}</h1>
+            <h6>{data.hello}</h6>
         </div>
     );
 }

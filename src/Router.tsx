@@ -5,6 +5,7 @@ import Header from "./containers/Header";
 import Body from "./pages/body";
 import Home from "./pages/home";
 import ProductGallery from "./components/productgallery";
+import { QueryFunction } from './graphql';
 
 
 export interface RouterProps {
@@ -16,6 +17,7 @@ const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
     return (
         <React.Fragment>
             {!disableHeaderFooter && <Route component={Header} />}
+            
             <Route  
                 render={ props => (
                     <Body {...props}>
@@ -28,7 +30,9 @@ const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
                     </Body>
                 )}
             />
+            <QueryFunction />
             {!disableHeaderFooter && <Route component={Footer} />}
+            
         </React.Fragment>
     )
 }

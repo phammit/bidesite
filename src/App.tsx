@@ -9,11 +9,8 @@ export interface AppProps {
 
 const App: FC<AppProps> = ({children, rootStyle}) => {
   return (
-    <div className="App">
-      
-       <h1>BidSite</h1> 
-       <QueryFunction />
-      
+    <div className="MyApp">
+      <QueryFunction/>
       {children}
     </div>
   );
