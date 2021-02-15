@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Footer from "./containers/Footer";
-import Header from "./containers/Header";
+import Header from "header";
 import Body from "./pages/body";
 import Home from "./pages/home";
 import ProductGallery from "./components/productgallery";
@@ -24,7 +24,7 @@ export interface RouterProps {
 const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
     return (
         <React.Fragment>
-            {!disableHeaderFooter && <Route component={Header3} />}
+            {!disableHeaderFooter && <Route component={Header} />}
             <Route component={DropDownHeader} />
             
             

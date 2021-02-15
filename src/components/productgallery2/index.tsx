@@ -8,6 +8,7 @@ import litecoinImage from "./images/litecoin.jpg";
 
 
 //code from https://css-tricks.com/designing-a-product-page-layout-with-flexbox/
+//this code uses Material UI's Grid components
 const HeaderLayout = () => {
     return (
         <div>

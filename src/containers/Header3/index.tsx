@@ -15,9 +15,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import SvgIcon from "@material-ui/core/SvgIcon";
-
-import WaykichainIcon from 'waykichain-icon';
+import Popover from '@material-ui/core/Popover';
 import { ReactComponent as NewIcon } from './logo.svg'
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -96,6 +96,8 @@ export default function Header3() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
 
+  const [myAnchorEl, setMyAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -115,6 +117,17 @@ export default function Header3() {
   const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  const handleClick= (event: React.MouseEvent<HTMLButtonElement>) => {
+    setMyAnchorEl(event.currentTarget);
+  }
+
+  const handleClose = () => {
+    setMyAnchorEl(null);
+  }
+
+  const open = Boolean(myAnchorEl);
+  const id = open ? 'simple-popover' : undefined;
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -180,7 +193,7 @@ export default function Header3() {
           
             <SvgIcon component={NewIcon} viewBox=" 0 0 400 276.6" />
           
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h6">
             Bidsite
           </Typography>
           <div className={classes.search}>
@@ -228,6 +241,7 @@ export default function Header3() {
               <MoreIcon />
             </IconButton>
           </div>
+          
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
@@ -235,3 +249,29 @@ export default function Header3() {
     </div>
   );
 }
+
+
+
+/*
+<div>
+            <Button variant="contained" color="secondary" size="small" aria-describedby={id} onClick={handleClick} >
+              Open Popover
+            </Button>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={myAnchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'center',
+              }}
+            >
+              <Typography>Minh's PopoverContent</Typography>
+            </Popover>
+          </div>
+*/
