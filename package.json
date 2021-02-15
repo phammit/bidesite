@@ -21,6 +21,8 @@
     "express-graphql": "^0.12.0",
     "gmail-icon": "./src/icons/GmailIcon",
     "graphql": "^15.4.0",
+    "header": "./src/containers/Header",
+    "material-ui-search-bar": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -28,8 +30,7 @@
     "theme": "./src/theme",
     "typescript": "^4.0.3",
     "waykichain-icon": "./src/icons/WaykiChain",
-    "web-vitals": "^0.2.4",
-    "header": "./src/containers/Header"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",

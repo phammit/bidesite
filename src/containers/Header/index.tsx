@@ -1,8 +1,114 @@
+import React, { FC } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import IconButton from '@material-ui/core/IconButton';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import Badge from '@material-ui/core/Badge';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+
+import SearchBar from 'material-ui-search-bar';
+import { ReactComponent as NewIcon } from './logo.svg';
+
+const useStyles = makeStyles(() => ({
+        title: {
+
+        },
+        rightElement: {
+            //float: "left", didn't work
+            //flex: '1 0 0',
+        },
+        leftElement: {
+            //flex: '1 0 0',
+        },
+        middleElement: {
+            //flex: '3 0 0',
+            width: '50%',
+        },
+        appBar: {
+            justifyContent: "space-between",
+        },
+        searchBar: {
+            boxShadow: "1px 1px 1px 1px",
+        },
+    })
+)
+
+export interface headerProps {
+
+}
+
+const Header: FC<headerProps> = ({}) => {
+    const classes = useStyles();
+    const [language, setLanguage] = React.useState('');
+    const [searchBar, setSearchBar] = React.useState('');
+
+    const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+        setLanguage(event.target.value as string);
+    };
+
+    const doSomething = () => {}
+
+    return (
+        <div>
+            <AppBar position="static">
+                <Toolbar className={classes.appBar}>
+                    <div className={classes.leftElement}>    
+                        <Button>
+                            <SvgIcon component={NewIcon} viewBox=" 0 0 400 276.6" fontSize="large"/>
+                            <Typography className={classes.title} variant="h6">
+                                Bidsite
+                            </Typography>
+                        </Button>
+                    </div>
+                    <div className={classes.middleElement}>
+                        <SearchBar 
+                            value={searchBar}
+                            onChange={(newValue) => setSearchBar(newValue)}
+                            onRequestSearch={() => doSomething()}
+                            className={classes.searchBar}
+                        />
+                    </div>
+                    <div className={classes.rightElement}>
+                        <Button>
+                            English
+                        </Button>
+                        <IconButton aria-label="MenuforAccessibility" color="primary">
+                            <Badge badgeContent={11} color="secondary">
+                                <NotificationsIcon />
+                            </Badge>
+                        </IconButton>
+                        <Button>
+                            <Typography>
+                                Login
+                            </Typography>
+                        </Button>
+                    </div>
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
+
+}
+
+export default Header;
+
+
+
+/*
 import React, { FC } from "react";
 import { AppBar, Toolbar, Typography, makeStyles, Button } from "@material-ui/core";
 import "../../index.css";
 import { Link as RouterLink } from "react-router-dom";
 import { relative } from "path";
+
 
 const useStyles = makeStyles(() =>({
     myheader: {
@@ -84,3 +190,4 @@ const Header: FC<headerProps> = () => {
 }
 
 export default Header;
+*/
