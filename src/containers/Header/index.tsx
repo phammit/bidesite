@@ -5,7 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { relative } from "path";
 
 const useStyles = makeStyles(() =>({
-    header: {
+    myheader: {
         backgroundColor: "#00BFFF",
         //paddingRight: "79px",
         //paddingLeft: "118px",
@@ -23,7 +23,7 @@ const useStyles = makeStyles(() =>({
         marginLeft: "39px",
     },
     toolbar: {
-        display: "flex",
+        //display: "flex",
         justifyContent: "space-between",
     },
 }));
@@ -42,7 +42,7 @@ const headersData = [
 export interface headerProps {};
 
 const Header: FC<headerProps> = () => {
-    const { header, logo, menuButton, toolbar } = useStyles();
+    const { myheader, logo, menuButton, toolbar } = useStyles();
 
     const displayDesktop = () => {
         return <Toolbar className={toolbar}>
@@ -77,7 +77,8 @@ const Header: FC<headerProps> = () => {
 
     return (
         <header>
-            <AppBar className={header}>{displayDesktop()}</AppBar>
+            <AppBar className={myheader}>{displayDesktop()}</AppBar>
+            <Toolbar />
         </header>
     );
 }

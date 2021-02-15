@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import Provider from './Provider';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './Router';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 ReactDOM.render(
   <React.StrictMode>
   <Provider>
+    <CssBaseline />
     <BrowserRouter>
       <App>
         <Router disableHeaderFooter={false} />

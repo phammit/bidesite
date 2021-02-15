@@ -10,7 +10,7 @@ export interface AppProps {
 const App: FC<AppProps> = ({children, rootStyle}) => {
   return (
     <div className="MyApp">
-      <QueryFunction/>
+      
       {children}
     </div>
   );

@@ -19,7 +19,7 @@ export const QueryFunction = () =>  {
     }
 
     return (
-        <div className="App">
+        <div className="graphqlreturn">
             <h6>{data.hello}</h6>
         </div>
     );

@@ -6,6 +6,14 @@ import Body from "./pages/body";
 import Home from "./pages/home";
 import ProductGallery from "./components/productgallery";
 import { QueryFunction } from './graphql';
+import Header2 from "./containers/Header2";
+import ProductGallery2 from "./components/productgallery2";
+import Header3 from "./containers/Header3";
+import DropDownHeader from "./containers/DropDownHeader";
+import ProductGalleryMiners from "./components/productgalleryMiners";
+import ResultsPage from "./components/searchResultsPage";
+
+import CSSGrid from "./components/gridlayout";
 
 
 export interface RouterProps {
@@ -16,7 +24,10 @@ export interface RouterProps {
 const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
     return (
         <React.Fragment>
-            {!disableHeaderFooter && <Route component={Header} />}
+            {!disableHeaderFooter && <Route component={Header3} />}
+            <Route component={DropDownHeader} />
+            
+            
             
             <Route  
                 render={ props => (
@@ -26,11 +37,20 @@ const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
                             <Route path="/productgallery" 
                                 component={ProductGallery} exact 
                             />
+                            <Route path="/productgallery2" 
+                                component={ProductGallery2} exact 
+                            />
+                            <Route path="/grid"
+                                component={CSSGrid} exact
+                            />
+                            <Route path="/productgalleryminers"
+                                component={ProductGalleryMiners} exact
+                            />
                         </Switch>
                     </Body>
                 )}
             />
-            <QueryFunction />
+           
             {!disableHeaderFooter && <Route component={Footer} />}
             
         </React.Fragment>
@@ -38,3 +58,7 @@ const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
 }
 
 export default Router;
+
+
+// this is the connected component - graphql
+// <QueryFunction />
