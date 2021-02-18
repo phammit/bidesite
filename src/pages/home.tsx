@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     root: {
         paddingTop: 30,
         paddingBottom: 30,
+        boxShadow: '0px 0px 0px 1px',
     },
     image: {
         maxwidth: 150,
@@ -47,6 +48,7 @@ const Home: FC<HomeProps> = () => {
     const classes = useStyles();
 
     return(
+        <div>
         <div
             className={classes.root}
         >
@@ -54,169 +56,234 @@ const Home: FC<HomeProps> = () => {
             <Grid container spacing={1} className={classes.scrollingwrapper}>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}>
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image='/images/digitalWallet.jpg' className={classes.image}/>
-                            <Typography>
-                                Homepage
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image='/images/digitalWallet.jpg' className={classes.image}/>
+                                <Typography>
+                                    Homepage
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/miniMiner.jpg" className={classes.image} />
-                            <Typography>
-                                Mini Miner
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/miniMiner.jpg" className={classes.image} />
+                                <Typography>
+                                    Mini Miner
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="/images/bitcoin.jpg" className={classes.image}/>
-                            <Typography>
-                                Mini Miner 2
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="/images/bitcoin.jpg" className={classes.image}/>
+                                <Typography>
+                                    Mini Miner 2
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="/images/redScooter.jpg" className={classes.image} />
-                            <Typography>
-                                Homepage
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="/images/redScooter.jpg" className={classes.image} />
+                                <Typography>
+                                    Homepage
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}>
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/RTX2080.jpg" className={classes.image} />
-                            <Typography>
-                                Mini Miner
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/RTX2080.jpg" className={classes.image} />
+                                <Typography>
+                                    Mini Miner
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/miniMiner.jpg" className={classes.image}/>
-                            <Typography>
-                                Mini Miner 2
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/miniMiner.jpg" className={classes.image}/>
+                                <Typography>
+                                    Mini Miner 2
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
             </Grid>
-        <div>
-
         </div>
+
+        <div className={classes.root}>
         <h4 className={classes.smallheading}>Recently viewed</h4>
             <Grid container spacing={1} className={classes.scrollingwrapper}>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}>
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image='images/coolGraphicsCard.jpg' className={classes.image}/>
-                            <Typography>
-                                Homepage
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image='images/coolGraphicsCard.jpg' className={classes.image}/>
+                                <Typography>
+                                    Homepage
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/rig.jpg" className={classes.image} />
-                            <Typography>
-                                Mini Miner
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/rig.jpg" className={classes.image} />
+                                <Typography>
+                                    Mini Miner
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/scateboard.jpg" className={classes.image}/>
-                            <Typography>
-                                Mini Miner 2
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/scateboard.jpg" className={classes.image}/>
+                                <Typography>
+                                    Mini Miner 2
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="/images/RTX2080.jpg" className={classes.image} />
-                            <Typography>
-                                Homepage
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="/images/RTX2080.jpg" className={classes.image} />
+                                <Typography>
+                                    Homepage
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}>
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/miniWallet.jpg" className={classes.image} />
-                            <Typography>
-                                Mini Miner
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/miniWallet.jpg" className={classes.image} />
+                                <Typography>
+                                    Mini Miner
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
                 <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
                     <CardActionArea onClick={() => {alert('clicked')}}> 
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <CardMedia image="images/coolGraphicsCard.jpg" className={classes.image}/>
-                            <Typography>
-                                Mini Miner 2
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/coolGraphicsCard.jpg" className={classes.image}/>
+                                <Typography>
+                                    Mini Miner 2
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </CardActionArea>
                 </Grid>
             </Grid>
-        <div>
-
         </div>
-            <Grid container >
-                <Grid item>
-                HomePage
+
+        <div className={classes.root}>
+        <h4 className={classes.smallheading}>Exciting Finds</h4>
+            <Grid container spacing={1} className={classes.scrollingwrapper}>
+                <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
+                    <CardActionArea onClick={() => {alert('clicked')}}>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image='images/coolGraphicsCard.jpg' className={classes.image}/>
+                                <Typography>
+                                    Homepage
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </CardActionArea>
                 </Grid>
-                <Grid item>
-                HomePage
+                <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
+                    <CardActionArea onClick={() => {alert('clicked')}}> 
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/rig.jpg" className={classes.image} />
+                                <Typography>
+                                    Mini Miner
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </CardActionArea>
                 </Grid>
-                <Grid item>
-                HomePage
+                <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
+                    <CardActionArea onClick={() => {alert('clicked')}}> 
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/scateboard.jpg" className={classes.image}/>
+                                <Typography>
+                                    Mini Miner 2
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </CardActionArea>
+                </Grid>
+                <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
+                    <CardActionArea onClick={() => {alert('clicked')}}> 
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="/images/RTX2080.jpg" className={classes.image} />
+                                <Typography>
+                                    Homepage
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </CardActionArea>
+                </Grid>
+                <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
+                    <CardActionArea onClick={() => {alert('clicked')}}>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/miniWallet.jpg" className={classes.image} />
+                                <Typography>
+                                    Mini Miner
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </CardActionArea>
+                </Grid>
+                <Grid item className={classes.scrollitem} xs={6} sm={4} md={2} lg={2} xl={2}>
+                    <CardActionArea onClick={() => {alert('clicked')}}> 
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <CardMedia image="images/coolGraphicsCard.jpg" className={classes.image}/>
+                                <Typography>
+                                    Mini Miner 2
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </CardActionArea>
                 </Grid>
             </Grid>
+        </div>
         </div>
     );
 }

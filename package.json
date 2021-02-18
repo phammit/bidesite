@@ -30,7 +30,8 @@
     "theme": "./src/theme",
     "typescript": "^4.0.3",
     "waykichain-icon": "./src/icons/WaykiChain",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "dropdownheader": "./src/containers/DropDownHeader"
   },
   "scripts": {
     "start": "react-scripts start",

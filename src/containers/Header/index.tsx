@@ -8,11 +8,6 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import IconButton from '@material-ui/core/IconButton';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Badge from '@material-ui/core/Badge';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 
 import SearchBar from 'material-ui-search-bar';
 import { ReactComponent as NewIcon } from './logo.svg';
@@ -32,18 +27,19 @@ const useStyles = makeStyles(() => ({
             //flex: '3 0 0',
             width: '50%',
         },
-        appBar: {
+        toolBar: {
             justifyContent: "space-between",
         },
         searchBar: {
             boxShadow: "1px 1px 1px 1px",
         },
+        appBar: {
+            boxShadow: "0px 0px 0px 0px",
+        }
     })
 )
 
-export interface headerProps {
-
-}
+export interface headerProps {}
 
 const Header: FC<headerProps> = ({}) => {
     const classes = useStyles();
@@ -58,8 +54,8 @@ const Header: FC<headerProps> = ({}) => {
 
     return (
         <div>
-            <AppBar position="static">
-                <Toolbar className={classes.appBar}>
+            <AppBar position="static" className={classes.appBar}>
+                <Toolbar className={classes.toolBar}>
                     <div className={classes.leftElement}>    
                         <Button>
                             <SvgIcon component={NewIcon} viewBox=" 0 0 400 276.6" fontSize="large"/>

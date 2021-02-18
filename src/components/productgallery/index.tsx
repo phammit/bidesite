@@ -2,9 +2,22 @@ import React, { FC } from "react";
 import './index.css';
 import bitcoinImage from "./images/bitcoin.jpg";
 import litecoinImage from "./images/litecoin.jpg";
+import { makeStyles } from "@material-ui/core/styles";
+
+
+const useStyles = makeStyles(() => ({
+        topNav: {
+            marginTop: "20px",
+        },
+    })
+)
+
+export interface someProps {}
 
 //code from https://css-tricks.com/designing-a-product-page-layout-with-flexbox/
-const HeaderLayout = () => {
+const HeaderLayout: FC<someProps> = ({}) => {
+    const classes = useStyles();
+
     return (
         <div>
         <nav className="product-filter">
@@ -107,7 +120,6 @@ export interface productprops { };
 const ProductGallery: FC<productprops> = ({ }) => {
     return (
         <div>
-        <div>ProductGalleryPage</div>
         <HeaderLayout />
         </div>
     );

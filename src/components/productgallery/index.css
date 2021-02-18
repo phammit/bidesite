@@ -1,5 +1,6 @@
 .product-filter {
     display: flex;
+    margin-top: 10px;
 }
 
 .product-filter h1 {

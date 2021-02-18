@@ -11,6 +11,13 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             flexGrow: 1,
+           // '& > *': {
+           //     margin: theme.spacing(1),
+           // },
+        },
+        button: {
+            backgroundColor: 'transparent',
+            boxShadow: '0px 0px 0px 0px',
         },
     }),
 );
@@ -29,19 +36,19 @@ const DropDownHeader: FC<DropdownProps> =({}) => {
       <Container className={classes.root}>
           <Grid container justify="space-evenly">
               <Grid item>
-                  <Button variant="contained" component={RouterLink} to="/productgalleryminers"><h3>Miners</h3></Button>
+                  <Button variant="contained" component={RouterLink} to="/productgalleryminers" className={classes.button}>Miners</Button>
               </Grid>
               <Grid item>
-                  <h3>Computers</h3>
+                    <Button variant="contained" component={RouterLink} to="/productgalleryminers" className={classes.button}>Computers</Button>
               </Grid>
               <Grid item>
-                  <h3>Graphics Cards</h3>
+                <Button variant="contained" component={RouterLink} to="/productgalleryminers" className={classes.button}>Graphics Cards</Button>
               </Grid>
               <Grid item>
-                  <h3>Electronics</h3>
+                <Button variant="contained" component={RouterLink} to="/productgalleryminers" className={classes.button}>Electronics</Button>
               </Grid>
               <Grid item>
-                  <h3>Cool Stuff</h3>
+                <Button variant="contained" component={RouterLink} to="/productgalleryminers" className={classes.button}>Cool Stuff</Button>
               </Grid>
 
           </Grid>
