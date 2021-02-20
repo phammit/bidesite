@@ -11,7 +11,6 @@ import ProductGallery2 from "./components/productgallery2";
 import Header3 from "./containers/Header3";
 import DropDownHeader from "./containers/DropDownHeader";
 import ProductGalleryMiners from "./components/productgalleryMiners";
-import ResultsPage from "./components/searchResultsPage";
 import SearchResults from "searchresults";
 
 import CSSGrid from "./components/gridlayout";

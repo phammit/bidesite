@@ -4,7 +4,28 @@ import propsFactory from "./props";
 import green from "@material-ui/core/colors/green";
 import yellow from "@material-ui/core/colors/yellow";
 
+export const BREAKPOINT_XS = 0; // Use 375 as reference for XS screens
+export const BREAKPOINT_SM = 768;
+export const BREAKPOINT_MD = 992;
+export const BREAKPOINT_LG = 1200;
+export const BREAKPOINT_XL = 1600;
+
+export const FONT_THIN = 100;
+export const FONT_REGULAR = 400;
+export const FONT_MEDIUM = 500;
+export const FONT_BOLD = 600;
+
+export const FONT_BARON_SANS = "BaronSans, Helvetica, Arial";
+export const FONT_CASLON = "CaslonRHThin, Big Caslon, Palatino";
+export const FONT_MINION = "minion-pro, Times New Roman, serif";
+export const FONT_PROXIMA_NOVA = "proxima-nova, Helvetica, Arial, sans-serif";
+export const FONT_ACUMIN_PRO = "acumin-pro, Arial, Helvetica, sans-serif";
+
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: FONT_BARON_SANS,
+    htmlFontSize: 12 // default is 14, showing here for easier reading of values, also set in index.css
+  },
   palette: {
     primary: {
       main: '#fffff',
@@ -12,7 +33,17 @@ const theme = createMuiTheme({
     secondary: {
       main: yellow[500],
     }
-  }
+  },
+  spacing: 8,
+  breakpoints: {
+    values: {
+      xs: BREAKPOINT_XS,
+      sm: BREAKPOINT_SM,
+      md: BREAKPOINT_MD,
+      lg: BREAKPOINT_LG,
+      xl: BREAKPOINT_XL
+    }
+  },
 });
 
 export default theme;

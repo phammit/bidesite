@@ -20,7 +20,7 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import { green } from '@material-ui/core/colors';
 
 //import DataJson from '/staticdata/listingformat.json';
-const newlistingData = listingData.data;
+//const newlistingData = listingData.data;
 
 //styles section
 const useStyles = makeStyles((theme: Theme) => ({
@@ -83,8 +83,6 @@ const SearchResults: FC<someProps> = ({}) => {
       })((props: CheckboxProps) => <Checkbox color="default" {...props} />);
 
     return(
-        <div>
-        <div>
             <Grid container spacing={1}>
                 <Grid item xs={1} sm={2} md={2} lg={2} xl={2} className={classes.leftspacing}>
                     <h4 className={classes.lefttoolheading}>Search Results Filter Section</h4>
@@ -201,6 +199,297 @@ const SearchResults: FC<someProps> = ({}) => {
                 <Grid item xs={11} sm={10} md={10} lg={10} xl={10} className={classes.rightspacing}>
                     <h4>Search Results Items List</h4>
                     <Grid container spacing={1}>
+                        
+                            {listingData.data.map((m)=> {
+                                    return (
+                                        <Grid item xs={3} id={m.id}>
+                                        <ImgCard title={m.title}
+                                            price={m.price}
+                                            name={m.sellerName}
+                                            image={m.images[0].thumbnail}
+                                            id={m.id}
+                                        />
+                                        </Grid>
+                                    );
+                                }
+                            )}
+                        
+                    </Grid>
+                </Grid>
+            </Grid>
+        
+    )
+} 
+
+export default SearchResults;
+
+
+const listingData = 
+{
+  "data":
+            [
+                {
+                    "id": "EIAK1KDI3DKASI38572DKFIE",
+                    "version": "0.1",
+                    "creatingDate": "February 10, 2021",
+                    "listingDate": "February 11, 2021",
+                    "listingType": "escrow",
+                    "listingFormat": "fixed price",
+                    "allowOfferPrice": true,
+                    "allowBuyerSuggestedEscrow": true,
+                    "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                    "title": "listing display name",
+                    "description": "ibso fact etc. List's long description",
+                    "images": [ 
+                    {
+                        "thumbnail": "http://localhost:3000/images/miniMiner.jpg",
+                        "image": "http://localhost:3000/images/miniMiner.jpg"
+                    }, 
+                    {
+                        "thumbnail": "http://localhost:3000/images/miniMiner.jpg",
+                        "image": "http://localhost:3000/images/miniMiner.jpg"
+                    }],
+                    "price": 199.99,
+                    "priceDrop": 10.00,
+                    "baseCurrency": "USD",
+                    "quantityAvail": 4,
+                    "condition": "new",
+                    "sellerId": "10000001",
+                    "sellerName": "NumberOneSeller",
+                    "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                    "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                    "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                    }  
+                },
+                {
+                "id": "EIAK1KDI3DKASI38572DKFIA",
+                "version": "0.1",
+                "creatingDate": "February 10, 2021",
+                "listingDate": "February 11, 2021",
+                "listingType": "escrow",
+                "listingFormat": "fixed price",
+                "allowOfferPrice": true,
+                "allowBuyerSuggestedEscrow": true,
+                "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                "title": "listing display name",
+                "description": "ibso fact etc. List's long description",
+                "images": [ 
+                    {
+                    "thumbnail": "http://localhost:3000/images/bitcoin.jpg",
+                    "image": "http://localhost:3000/images/bitcoin.jpg"
+                    }, 
+                    {
+                    "thumbnail": "http://localhost:3000/images/coolGraphicsCard.jpg",
+                    "image": "http://localhost:3000/images/coolGraphicsCard.jpg"
+                    }],
+                "price": 99.99,
+                "priceDrop": 10.00,
+                "baseCurrency": "USD",
+                "quantityAvail": 4,
+                "condition": "new",
+                "sellerId": "10000001",
+                "sellerName": "MasterZ",
+                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                }
+                },
+                {
+                "id": "EIAK1KDI3DKASI38572DKFIA",
+                "version": "0.1",
+                "creatingDate": "February 10, 2021",
+                "listingDate": "February 11, 2021",
+                "listingType": "escrow",
+                "listingFormat": "fixed price",
+                "allowOfferPrice": true,
+                "allowBuyerSuggestedEscrow": true,
+                "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                "title": "listing display name",
+                "description": "ibso fact etc. List's long description",
+                "images": [ 
+                    {
+                    "thumbnail": "http://localhost:3000/images/miniWallet.jpg",
+                    "image": "http://localhost:3000/images/miniWallet.jpg"
+                    }, 
+                    {
+                    "thumbnail": "http://localhost:3000/images/miniWallet.jpg",
+                    "image": "http://localhost:3000/images/miniWallet.jpg"
+                    }],
+                "price": 48.06,
+                "priceDrop": 10.00,
+                "baseCurrency": "USD",
+                "quantityAvail": 4,
+                "condition": "new",
+                "sellerId": "10000001",
+                "sellerName": "JustAnotherAseller",
+                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                }
+                },
+                {
+                "id": "EIAK1KDI3DKASI38572DKFEB",
+                "version": "0.1",
+                "creatingDate": "February 10, 2021",
+                "listingDate": "February 11, 2021",
+                "listingType": "escrow",
+                "listingFormat": "fixed price",
+                "allowOfferPrice": true,
+                "allowBuyerSuggestedEscrow": true,
+                "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                "title": "listing display name",
+                "description": "ibso fact etc. List's long description",
+                "images": [ 
+                    {
+                    "thumbnail": "http://localhost:3000/images/redScooter.jpg",
+                    "image": "http://localhost:3000/images/redScooter.jpg"
+                    }, 
+                    {
+                    "thumbnail": "http://localhost:3000/images/redScooter.jpg",
+                    "image": "http://localhost:3000/images/redScooter.jpg"
+                    }],
+                "price": 56.00,
+                "priceDrop": 10.00,
+                "baseCurrency": "USD",
+                "quantityAvail": 4,
+                "condition": "new",
+                "sellerId": "10000001",
+                "sellerName": "BestBuyCenter",
+                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                }
+                },
+                {
+                "id": "EIAK1KDI3DKASI38572DKFUI",
+                "version": "0.1",
+                "creatingDate": "February 10, 2021",
+                "listingDate": "February 11, 2021",
+                "listingType": "escrow",
+                "listingFormat": "fixed price",
+                "allowOfferPrice": true,
+                "allowBuyerSuggestedEscrow": true,
+                "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                "title": "listing display name",
+                "description": "ibso fact etc. List's long description",
+                "images": [ 
+                    {
+                    "thumbnail": "http://localhost:3000/images/RTX2080.jpg",
+                    "image": "http://localhost:3000/images/RTX2080.jpg"
+                    }, 
+                    {
+                    "thumbnail": "http://localhost:3000/images/RTX2080.jpg",
+                    "image": "http://localhost:3000/images/RTX2080.jpg"
+                    }],
+                "price": 599.00,
+                "priceDrop": 10.00,
+                "baseCurrency": "USD",
+                "quantityAvail": 4,
+                "condition": "new",
+                "sellerId": "10000001",
+                "sellerName": "UpCycler",
+                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                }
+                },
+                {
+                "id": "EIAK1KDI3DKASI38572DKFPL",
+                "version": "0.1",
+                "creatingDate": "February 10, 2021",
+                "listingDate": "February 11, 2021",
+                "listingType": "escrow",
+                "listingFormat": "fixed price",
+                "allowOfferPrice": true,
+                "allowBuyerSuggestedEscrow": true,
+                "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                "title": "listing display name",
+                "description": "ibso fact etc. List's long description",
+                "images": [ 
+                    {
+                    "thumbnail": "http://localhost:3000/images/scateboard.jpg",
+                    "image": "http://localhost:3000/images/scateboard.jpg"
+                    }, 
+                    {
+                    "thumbnail": "http://localhost:3000/images/scateboard.jpg",
+                    "image": "http://localhost:3000/images/scateboard.jpg"
+                    }],
+                "price": 129.85,
+                "priceDrop": 10.00,
+                "baseCurrency": "USD",
+                "quantityAvail": 4,
+                "condition": "new",
+                "sellerId": "10000001",
+                "sellerName": "CryptoManiac",
+                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                }
+                },
+                {
+                "id": "EIAK1KDI3DKASI38572DKFRD",
+                "version": "0.1",
+                "creatingDate": "February 10, 2021",
+                "listingDate": "February 11, 2021",
+                "listingType": "escrow",
+                "listingFormat": "fixed price",
+                "allowOfferPrice": true,
+                "allowBuyerSuggestedEscrow": true,
+                "acceptableEscrows": ["agent001", "agent002", "agent133"],
+                "title": "listing display name",
+                "description": "ibso fact etc. List's long description",
+                "images": [ 
+                    {
+                    "thumbnail": "http://localhost:3000/images/rig.jpg",
+                    "image": "http://localhost:3000/images/rig.jpg"
+                    }, 
+                    {
+                    "thumbnail": "http://localhost:3000/images/rig.jpg",
+                    "image": "http://localhost:3000/images/rig.jpg"
+                    }],
+                "price": 69.99,
+                "priceDrop": 10.00,
+                "baseCurrency": "USD",
+                "quantityAvail": 4,
+                "condition": "new",
+                "sellerId": "10000001",
+                "sellerName": "MakeMoney",
+                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
+                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
+                "itemLocation": {
+                    "city": "Sachse",
+                    "province": "TX",
+                    "country": "USA"
+                }
+                }
+            ]
+}
+
+const newlistingData = listingData.data;
+
+
+/**
+ <Grid item xs={11} sm={10} md={10} lg={10} xl={10} className={classes.rightspacing}>
+                    <h4>Search Results Items List</h4>
+                    <Grid container spacing={1}>
                         <Grid item xs={4}>
                             <ImgCard/>
                         </Grid>
@@ -215,276 +504,4 @@ const SearchResults: FC<someProps> = ({}) => {
                         </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-        </div>
-        <div>
-            {listingData.data.map((m)=> {
-                    return (<div>
-                            <div>{m.title}</div>
-                            <div>{m.price}</div>
-                            <img src={m.images[0].thumbnail} height="100px"></img>
-                            </div>
-                        );
-                }
-            )}
-        </div>
-        </div>
-    )
-} 
-
-export default SearchResults;
-
-
-const listingData = 
-{
-  "data":
-          [
-            {
-                "id": "EIAK1KDI3DKASI38572DKFIE",
-                "version": "0.1",
-                "creatingDate": "February 10, 2021",
-                "listingDate": "February 11, 2021",
-                "listingType": "escrow",
-                "listingFormat": "fixed price",
-                "allowOfferPrice": true,
-                "allowBuyerSuggestedEscrow": true,
-                "acceptableEscrows": ["agent001", "agent002", "agent133"],
-                "title": "listing display name",
-                "description": "ibso fact etc. List's long description",
-                "images": [ 
-                  {
-                    "thumbnail": "http://localhost:3000/images/miniMiner.jpg",
-                    "image": "http://localhost:3000/images/miniMiner.jpg"
-                  }, 
-                  {
-                    "thumbnail": "http://localhost:3000/images/miniMiner.jpg",
-                    "image": "http://localhost:3000/images/miniMiner.jpg"
-                  }],
-                "price": 199.99,
-                "priceDrop": 10.00,
-                "baseCurrency": "USD",
-                "quantityAvail": 4,
-                "condition": "new",
-                "sellerId": "10000001",
-                "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-                "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-                "itemLocation": {
-                  "city": "Sachse",
-                  "province": "TX",
-                  "country": "USA"
-                }  
-            },
-            {
-              "id": "EIAK1KDI3DKASI38572DKFIA",
-              "version": "0.1",
-              "creatingDate": "February 10, 2021",
-              "listingDate": "February 11, 2021",
-              "listingType": "escrow",
-              "listingFormat": "fixed price",
-              "allowOfferPrice": true,
-              "allowBuyerSuggestedEscrow": true,
-              "acceptableEscrows": ["agent001", "agent002", "agent133"],
-              "title": "listing display name",
-              "description": "ibso fact etc. List's long description",
-              "images": [ 
-                {
-                  "thumbnail": "http://localhost:3000/images/bitcoin.jpg",
-                  "image": "http://localhost:3000/images/bitcoin.jpg"
-                }, 
-                {
-                  "thumbnail": "http://localhost:3000/images/coolGraphicsCard.jpg",
-                  "image": "http://localhost:3000/images/coolGraphicsCard.jpg"
-                }],
-              "price": 99.99,
-              "priceDrop": 10.00,
-              "baseCurrency": "USD",
-              "quantityAvail": 4,
-              "condition": "new",
-              "sellerId": "10000001",
-              "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-              "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-              "itemLocation": {
-                "city": "Sachse",
-                "province": "TX",
-                "country": "USA"
-              }
-            },
-            {
-              "id": "EIAK1KDI3DKASI38572DKFIA",
-              "version": "0.1",
-              "creatingDate": "February 10, 2021",
-              "listingDate": "February 11, 2021",
-              "listingType": "escrow",
-              "listingFormat": "fixed price",
-              "allowOfferPrice": true,
-              "allowBuyerSuggestedEscrow": true,
-              "acceptableEscrows": ["agent001", "agent002", "agent133"],
-              "title": "listing display name",
-              "description": "ibso fact etc. List's long description",
-              "images": [ 
-                {
-                  "thumbnail": "http://localhost:3000/images/miniWallet.jpg",
-                  "image": "http://localhost:3000/images/miniWallet.jpg"
-                }, 
-                {
-                  "thumbnail": "http://localhost:3000/images/miniWallet.jpg",
-                  "image": "http://localhost:3000/images/miniWallet.jpg"
-                }],
-              "price": 48.06,
-              "priceDrop": 10.00,
-              "baseCurrency": "USD",
-              "quantityAvail": 4,
-              "condition": "new",
-              "sellerId": "10000001",
-              "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-              "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-              "itemLocation": {
-                "city": "Sachse",
-                "province": "TX",
-                "country": "USA"
-              }
-            },
-            {
-              "id": "EIAK1KDI3DKASI38572DKFEB",
-              "version": "0.1",
-              "creatingDate": "February 10, 2021",
-              "listingDate": "February 11, 2021",
-              "listingType": "escrow",
-              "listingFormat": "fixed price",
-              "allowOfferPrice": true,
-              "allowBuyerSuggestedEscrow": true,
-              "acceptableEscrows": ["agent001", "agent002", "agent133"],
-              "title": "listing display name",
-              "description": "ibso fact etc. List's long description",
-              "images": [ 
-                {
-                  "thumbnail": "http://localhost:3000/images/redScooter.jpg",
-                  "image": "http://localhost:3000/images/redScooter.jpg"
-                }, 
-                {
-                  "thumbnail": "http://localhost:3000/images/redScooter.jpg",
-                  "image": "http://localhost:3000/images/redScooter.jpg"
-                }],
-              "price": 56.00,
-              "priceDrop": 10.00,
-              "baseCurrency": "USD",
-              "quantityAvail": 4,
-              "condition": "new",
-              "sellerId": "10000001",
-              "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-              "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-              "itemLocation": {
-                "city": "Sachse",
-                "province": "TX",
-                "country": "USA"
-              }
-            },
-            {
-              "id": "EIAK1KDI3DKASI38572DKFUI",
-              "version": "0.1",
-              "creatingDate": "February 10, 2021",
-              "listingDate": "February 11, 2021",
-              "listingType": "escrow",
-              "listingFormat": "fixed price",
-              "allowOfferPrice": true,
-              "allowBuyerSuggestedEscrow": true,
-              "acceptableEscrows": ["agent001", "agent002", "agent133"],
-              "title": "listing display name",
-              "description": "ibso fact etc. List's long description",
-              "images": [ 
-                {
-                  "thumbnail": "http://localhost:3000/images/RTX2080.jpg",
-                  "image": "http://localhost:3000/images/RTX2080.jpg"
-                }, 
-                {
-                  "thumbnail": "http://localhost:3000/images/RTX2080.jpg",
-                  "image": "http://localhost:3000/images/RTX2080.jpg"
-                }],
-              "price": 599.00,
-              "priceDrop": 10.00,
-              "baseCurrency": "USD",
-              "quantityAvail": 4,
-              "condition": "new",
-              "sellerId": "10000001",
-              "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-              "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-              "itemLocation": {
-                "city": "Sachse",
-                "province": "TX",
-                "country": "USA"
-              }
-            },
-            {
-              "id": "EIAK1KDI3DKASI38572DKFPL",
-              "version": "0.1",
-              "creatingDate": "February 10, 2021",
-              "listingDate": "February 11, 2021",
-              "listingType": "escrow",
-              "listingFormat": "fixed price",
-              "allowOfferPrice": true,
-              "allowBuyerSuggestedEscrow": true,
-              "acceptableEscrows": ["agent001", "agent002", "agent133"],
-              "title": "listing display name",
-              "description": "ibso fact etc. List's long description",
-              "images": [ 
-                {
-                  "thumbnail": "http://localhost:3000/images/scateboard.jpg",
-                  "image": "http://localhost:3000/images/scateboard.jpg"
-                }, 
-                {
-                  "thumbnail": "http://localhost:3000/images/scateboard.jpg",
-                  "image": "http://localhost:3000/images/scateboard.jpg"
-                }],
-              "price": 129.85,
-              "priceDrop": 10.00,
-              "baseCurrency": "USD",
-              "quantityAvail": 4,
-              "condition": "new",
-              "sellerId": "10000001",
-              "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-              "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-              "itemLocation": {
-                "city": "Sachse",
-                "province": "TX",
-                "country": "USA"
-              }
-            },
-            {
-              "id": "EIAK1KDI3DKASI38572DKFRD",
-              "version": "0.1",
-              "creatingDate": "February 10, 2021",
-              "listingDate": "February 11, 2021",
-              "listingType": "escrow",
-              "listingFormat": "fixed price",
-              "allowOfferPrice": true,
-              "allowBuyerSuggestedEscrow": true,
-              "acceptableEscrows": ["agent001", "agent002", "agent133"],
-              "title": "listing display name",
-              "description": "ibso fact etc. List's long description",
-              "images": [ 
-                {
-                  "thumbnail": "http://localhost:3000/images/rig.jpg",
-                  "image": "http://localhost:3000/images/rig.jpg"
-                }, 
-                {
-                  "thumbnail": "http://localhost:3000/images/rig.jpg",
-                  "image": "http://localhost:3000/images/rig.jpg"
-                }],
-              "price": 69.99,
-              "priceDrop": 10.00,
-              "baseCurrency": "USD",
-              "quantityAvail": 4,
-              "condition": "new",
-              "sellerId": "10000001",
-              "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
-              "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
-              "itemLocation": {
-                "city": "Sachse",
-                "province": "TX",
-                "country": "USA"
-              }
-            }
-          ]
-}
-
-const newlistingData = listingData.data;
+ */

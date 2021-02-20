@@ -14,13 +14,54 @@ const useStyles = makeStyles({
   },
 });
 
-export interface someProps {}
+export interface someProps {
+  image: string,
+  title: string,
+  price: number,
+  name: string,
+  id: string,
+}
 
-const ImgMediaCard: FC<someProps> = ({}) => {
+const ImgMediaCard: FC<someProps> = ({image, title, price, name, id}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} id={id}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image={image}
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography >
+            {title}
+          </Typography>
+        </CardContent>
+        <CardContent>
+          <Typography >
+            {name}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          {price}
+        </Button>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+      </CardActions>
+    </Card>
+  );
+}
+
+export default ImgMediaCard;
+
+/**
+ <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -48,7 +89,4 @@ const ImgMediaCard: FC<someProps> = ({}) => {
         </Button>
       </CardActions>
     </Card>
-  );
-}
-
-export default ImgMediaCard;
+ */

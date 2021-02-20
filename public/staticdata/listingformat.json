@@ -29,6 +29,7 @@
                 "quantityAvail": 4,
                 "condition": "new",
                 "sellerId": "10000001",
+                "sellerName": "NumberOneSeller",
                 "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
                 "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
                 "itemLocation": {
@@ -64,6 +65,7 @@
               "quantityAvail": 4,
               "condition": "new",
               "sellerId": "10000001",
+              "sellerName": "MasterZ",
               "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
               "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
               "itemLocation": {
@@ -99,6 +101,7 @@
               "quantityAvail": 4,
               "condition": "new",
               "sellerId": "10000001",
+              "sellerName": "JustAnotherAseller",
               "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
               "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
               "itemLocation": {
@@ -134,6 +137,7 @@
               "quantityAvail": 4,
               "condition": "new",
               "sellerId": "10000001",
+              "sellerName": "BestBuyCenter",
               "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
               "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
               "itemLocation": {
@@ -169,6 +173,7 @@
               "quantityAvail": 4,
               "condition": "new",
               "sellerId": "10000001",
+              "sellerName": "UpCycler",
               "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
               "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
               "itemLocation": {
@@ -204,6 +209,7 @@
               "quantityAvail": 4,
               "condition": "new",
               "sellerId": "10000001",
+              "sellerName": "CryptoManiac",
               "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
               "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
               "itemLocation": {
@@ -239,6 +245,7 @@
               "quantityAvail": 4,
               "condition": "new",
               "sellerId": "10000001",
+              "sellerName": "MakeMoney",
               "paymentTypes": ["paypal", "venmo", "square cash", "wechat"],
               "paymentTypesCrypto": ["btc", "ltc", "eth", "xrp"],
               "itemLocation": {
