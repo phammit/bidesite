@@ -27,6 +27,7 @@ const HeaderLayout: FC<someProps> = ({}) => {
                     <label>Filter by:</label>
                     <select>
                         <option value="/">All Miners</option>
+                        <option value="10">Ten</option>
                     </select>
                 </div>
                 <div className="collection-sort">

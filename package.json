@@ -31,7 +31,8 @@
     "typescript": "^4.0.3",
     "waykichain-icon": "./src/icons/WaykiChain",
     "web-vitals": "^0.2.4",
-    "dropdownheader": "./src/containers/DropDownHeader"
+    "dropdownheader": "./src/containers/DropDownHeader",
+    "searchresults": "./src/containers/SearchResults"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -12,6 +12,7 @@ import Header3 from "./containers/Header3";
 import DropDownHeader from "./containers/DropDownHeader";
 import ProductGalleryMiners from "./components/productgalleryMiners";
 import ResultsPage from "./components/searchResultsPage";
+import SearchResults from "searchresults";
 
 import CSSGrid from "./components/gridlayout";
 
@@ -45,6 +46,9 @@ const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
                             />
                             <Route path="/productgalleryminers"
                                 component={ProductGalleryMiners} exact
+                            />
+                            <Route path="/searchresults"
+                                component={SearchResults} exact
                             />
                         </Switch>
                     </Body>
