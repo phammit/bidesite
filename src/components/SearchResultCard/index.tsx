@@ -7,11 +7,18 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Rating from '@material-ui/lab/Rating';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
+  typoclass: {
+    fontSize: 12,
+  },
+  cardContent: {
+    padding: "8px",
+  }
 });
 
 export interface someProps {
@@ -31,19 +38,20 @@ const ImgMediaCard: FC<someProps> = ({image, title, price, name, id}) => {
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
-          height="140"
+          height="220"
           image={image}
           title="Contemplative Reptile"
         />
-        <CardContent>
-          <Typography >
+        <CardContent className={classes.cardContent}>
+          <Typography className={classes.typoclass}>
             {title}
           </Typography>
         </CardContent>
         <CardContent>
-          <Typography >
+          <Typography className={classes.typoclass}>
             {name}
           </Typography>
+          <Rating name="half-raing" defaultValue={2.5} precision={0.5} size="small"/>
         </CardContent>
       </CardActionArea>
       <CardActions>
