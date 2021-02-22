@@ -27,6 +27,7 @@
     "material-ui-search-bar": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-image-gallery": "^1.0.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "searchresults": "./src/containers/SearchResults",
@@ -60,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-image-gallery": "^1.0.2",
     "@types/react-router-dom": "^5.1.7"
   }
 }
