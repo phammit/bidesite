@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 
 interface someProps {
@@ -21,6 +22,7 @@ function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 const useStyles = makeStyles({
     breadcrumb: {
         marginLeft: '40px',
+        //font: '1.0rem',  //did not do anything
     },
     container: {
         border: '1px',
@@ -45,7 +47,8 @@ const ListingPage: FC<someProps> = ({}) => {
             <Grid item xs={12}>
                 <Grid container>
                     <Grid item justify="flex-start" >
-                        <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumb}>
+                        <Breadcrumbs aria-label="breadcrumb" 
+                            separator={<NavigateNextIcon fontSize="small" />} className={classes.breadcrumb}>
                             <Link color="inherit" href="/" onClick={handleClick}>
                                 BideSite
                             </Link>
@@ -64,15 +67,28 @@ const ListingPage: FC<someProps> = ({}) => {
                         <Grid container>
                             <Grid item xs={12} className={classes.addpadding}>
                                 <Paper>Pictures of product with carousol</Paper>
-                                <ImageGallery items={images} showPlayButton={false} showBullets={true}/>
+                                <ImageGallery items={images} showPlayButton={false} showBullets={true} thumbnailPosition="left"
+                                    slideOnThumbnailOver={true}/>
                             </Grid>
                             <Grid item xs={12}>
-                                <Paper>HTML editor</Paper>
+                                <Paper>Description of Item</Paper>
                             </Grid>
                         </Grid>
                     </Grid>
                     <Grid item xs={4} className={classes.rightcolumn}>
                         <Paper>Item Information Column</Paper>
+                        <Grid container>
+                            <Grid item xs={12}>
+                                <Paper>Condition: "state"</Paper>
+                                <Paper>Available: "#", "#" sold</Paper>
+                            </Grid>
+                            <Grid item xs={11}>
+                                <Paper>
+                                    Price: "Paypal" "Venmo" "Crypto"
+                                </Paper>
+                            </Grid>
+                            
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

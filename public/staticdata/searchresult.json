@@ -1,0 +1,65 @@
+{
+    "took" : 4,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 1,
+      "successful" : 1,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 2,
+        "relation" : "eq"
+      },
+      "max_score" : 1.4655045,
+      "hits" : [
+        {
+          "_index" : "listing",
+          "_type" : "_doc",
+          "_id" : "1",
+          "_score" : 1.4655045,
+          "_source" : {
+            "id" : 1,
+            "title": "EVGA 1080 TI",
+            "sellerId": "10000001",
+            "price" : 12,
+            "description": "ibso fact etc. List's long description",
+            "listingType": "escrow",
+            "images": [ 
+              {
+                "thumbnail": "https://tinyurl.com/thumbnail_1",
+                "image": "https://tinyurl.com/image_1"
+              }],
+            "price": 199.99,
+            "priceDrop": 10.00,
+            "baseCurrency": "USD",
+            "condition": "new"
+          }
+        },
+        {
+          "_index" : "listing",
+          "_type" : "_doc",
+          "_id" : "6",
+          "_score" : 1.2255893,
+          "_source" : {
+            "id" : 6,
+            "title" : "ZOTAC RX 580",
+            "sellerId": "10000001",
+            "description": "second ibso fact etc. List's long description",
+            "listingType": "escrow",
+            "images": [ 
+              {
+                "thumbnail": "https://tinyurl.com/listing/2/thumbnail_1",
+                "image": "https://tinyurl.com/listing/2/image_1"
+              }],
+            "price": 99.99,
+            "priceDrop": 10.00,
+            "baseCurrency": "USD",
+            "quantityAvail": 4,
+            "condition": "new"
+          }
+        }
+      ]
+    }
+  }
