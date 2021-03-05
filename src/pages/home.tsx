@@ -1,13 +1,14 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import { green } from "@material-ui/core/colors";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import miniMiner from './miniMiner.jpg';
+import { getAllJSDocTags } from "typescript";
 
 
 const useStyles = makeStyles({
@@ -46,6 +47,11 @@ export interface HomeProps { };
 
 const Home: FC<HomeProps> = () => {
     const classes = useStyles();
+
+    useEffect(() => {
+        //fetching static data in public folder
+        getData();
+    },[]);
 
     return(
         <div>
@@ -289,3 +295,21 @@ const Home: FC<HomeProps> = () => {
 }
 
 export default Home;
+
+
+const getData = () => {
+    fetch('staticdata/listingformat.json'
+    ,{
+        headers : {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }).then(function(response){
+        console.log("fetching......");
+        console.log(response)
+        return response.json();
+    }).then(function(myJson) {
+        console.log("printing our myJson.......");
+        console.log(myJson);
+    })
+}

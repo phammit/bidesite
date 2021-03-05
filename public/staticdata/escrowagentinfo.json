@@ -1,0 +1,39 @@
+{
+    "id": "0001",
+    "name": "super seller",
+    "location": {
+      "address1": "100 main St",
+      "address2": "",
+      "city": "Sachse",
+      "province": "TX",
+      "country": "USA"
+    },
+    "verifiedBy": {
+      "id": true,
+      "email": true,
+      "address": true,
+      "bankAccount": true,
+      "paypal": true,
+      "facebook": true,
+      "gmail": false
+    },
+    "escrowRating": {
+      "stars": 2.5,
+      "numItemsEscrowed": 101,
+      "totalEscrowItemValueSold": 100000,
+      "totalEscrowItemValueSoldUnit": "USD",
+      "numPositiveReview": 101
+    },
+    "fees": [
+      {
+        "category": "electronics>computer>gpu",
+        "sellerFeePercent": 1,
+        "buyerFeePercent": 1
+      },
+      {
+        "category": "electronic goods>software license",
+        "sellerFeePercent": 1,
+        "buyerFeePercent": 1     
+      }
+    ]
+  }

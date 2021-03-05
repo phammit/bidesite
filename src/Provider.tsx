@@ -20,3 +20,12 @@ export const Provider: React.FC<ProviderProps> = ({ children }) => {
 }
 
 export default Provider;
+
+
+/**
+ <ApolloProvider client={client}>
+            <ThemeProvider theme={theme}>
+                {children}
+            </ThemeProvider>
+        </ApolloProvider>
+ */

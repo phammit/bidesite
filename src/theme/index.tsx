@@ -22,19 +22,19 @@ export const FONT_PROXIMA_NOVA = "proxima-nova, Helvetica, Arial, sans-serif";
 export const FONT_ACUMIN_PRO = "acumin-pro, Arial, Helvetica, sans-serif";
 
 const theme = createMuiTheme({
-  typography: {
-    fontFamily: FONT_BARON_SANS,
-    htmlFontSize: 12 // default is 14, showing here for easier reading of values, also set in index.css
-  },
+  /*typography: {
+    //fontFamily: FONT_BARON_SANS,
+    //htmlFontSize: 12 // default is 14, showing here for easier reading of values, also set in index.css
+  },*/
   palette: {
     primary: {
-      main: '#fffff',
+      main: '#90a4ae',
     },
     secondary: {
       main: yellow[500],
     }
   },
-  spacing: 8,
+  //spacing: 8,
   breakpoints: {
     values: {
       xs: BREAKPOINT_XS,
@@ -619,4 +619,5 @@ export default (
 }
 */
 
+////////////////my theme not RH's
 

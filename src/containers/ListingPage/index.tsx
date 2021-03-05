@@ -8,6 +8,10 @@ import Paper from '@material-ui/core/Paper';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import Box from '@material-ui/core/Box';
+import green from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 
 interface someProps {
@@ -19,7 +23,7 @@ function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     console.info("clicked a breadcrumb");
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     breadcrumb: {
         marginLeft: '40px',
         //font: '1.0rem',  //did not do anything
@@ -29,6 +33,7 @@ const useStyles = makeStyles({
     },
     addpadding: {
         padding: "20px",
+        maxWidth: "600px",
     },
     formargin: {
         margin: "0px 30px",
@@ -36,7 +41,19 @@ const useStyles = makeStyles({
     rightcolumn: {
         //marginLeft: "10px",
     },
-})
+    button: {
+        [theme.breakpoints.up('sm')]: {
+            backgroundColor: 'green[500]',
+        },
+    },
+    box: {
+        //minHeight: "50",
+        //padding: "10",
+        //marginTop: "10",
+        backgroundColor: '#fafafa',
+        //margin: '20 0 20',
+    },
+}))
 
 const ListingPage: FC<someProps> = ({}) => {
     const classes= useStyles();
@@ -64,30 +81,71 @@ const ListingPage: FC<someProps> = ({}) => {
                 <Grid container className={classes.container} spacing={3}>
                     <Grid item xs={7} className={classes.container}>
                         <Paper>Product Column Section 1</Paper>
-                        <Grid container>
-                            <Grid item xs={12} className={classes.addpadding}>
+                        <Grid container justify="center">
+                            <Grid item xs={11} className={classes.addpadding} >
                                 <Paper>Pictures of product with carousol</Paper>
                                 <ImageGallery items={images} showPlayButton={false} showBullets={true} thumbnailPosition="left"
                                     slideOnThumbnailOver={true}/>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={11}>
                                 <Paper>Description of Item</Paper>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={4} className={classes.rightcolumn}>
+                    <Grid item xs={4} className={classes.rightcolumn} >
                         <Paper>Item Information Column</Paper>
-                        <Grid container>
-                            <Grid item xs={12}>
-                                <Paper>Condition: "state"</Paper>
-                                <Paper>Available: "#", "#" sold</Paper>
-                            </Grid>
-                            <Grid item xs={11}>
+                        <Grid container justify="center">
+                            <Grid item xs={10} >
+                                <Card className={classes.box}>
+                                    <CardContent>
+                                        <Typography variant="h6" 
+                                            component="h6" 
+                                            gutterBottom
+                                        >
+                                            Condition: new 
+                                        </Typography>
+                                        <Typography variant="body1" 
+                                            gutterBottom
+                                        >
+                                            Available: 10,  5 sold
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <Typography gutterBottom variant="h5">Price: 10.25 USD</Typography>
+                                    <Box m={1}>    0.003 BTC </Box>
+                                    <Box m={1}>    "Venmo" "Crypto"</Box>
+                                </Card>
                                 <Paper>
-                                    Price: "Paypal" "Venmo" "Crypto"
+                                    <Box m={2}> Qty Available: 1  </Box>
+                                    <Box m={1}>  Buy Now   </Box>
+                                    <Box m={2}>   Make an Offer   </Box>
+                                </Paper>
+                                <Paper>
+                                    <Typography gutterBottom
+                                        variant="h6"
+                                    >
+                                        Seller Information  
+                                    </Typography>
+                                    <Box m={2}>   my_account001   </Box>
+                                    <Box m={2}>   stars   </Box>
                                 </Paper>
                             </Grid>
-                            
+                            <Grid item xs={10}>
+                                <Paper>
+                                    <Typography variant="h6"
+                                        gutterBottom
+                                    >
+                                        Accepted Escrow Providers
+                                    </Typography>
+                                    <Box>
+                                        Agent001
+                                    </Box>
+                                    <Box>
+                                        Agent002
+                                    </Box>
+                                </Paper>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
