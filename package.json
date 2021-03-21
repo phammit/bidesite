@@ -1,5 +1,6 @@
 {
   "name": "bidesite",
+  "proxy": "https://localhost:3000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,7 +30,7 @@
     "react-dom": "^17.0.1",
     "react-image-gallery": "^1.0.8",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.3",
     "searchresults": "./src/containers/SearchResults",
     "theme": "./src/theme",
     "typescript": "^4.0.3",

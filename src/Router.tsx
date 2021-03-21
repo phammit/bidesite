@@ -4,6 +4,7 @@ import Footer from "./containers/Footer";
 import Header from "header";
 import Body from "./pages/body";
 import Home from "./pages/home";
+import TestHome from "./pages/testhome";
 import ProductGallery from "./components/productgallery";
 import { QueryFunction } from './graphql';
 import Header2 from "./containers/Header2";
@@ -35,6 +36,7 @@ const Router: FC<RouterProps> = ({ disableHeaderFooter }) => {
                     <Body {...props}>
                         <Switch>
                             <Route path="/" component={Home} exact/>
+                            <Route path="/TestHome" component={TestHome} exact/>
                             <Route path="/productgallery" 
                                 component={ProductGallery} exact 
                             />

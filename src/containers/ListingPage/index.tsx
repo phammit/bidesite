@@ -183,3 +183,7 @@ const images = [
         thumbnail: "http://localhost:3000/images/RTX2080.jpg",
     },
 ]
+
+const listingInformation = {
+    
+}
