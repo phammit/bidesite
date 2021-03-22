@@ -65,7 +65,8 @@ export interface ListingInformation {
     price?: number;
     images: SomeImages[];
     //passedImage?: string;
-    descritpion?: string;
+    description?: string;
+    sellerName?: string;
 }
 
 const ItemsTest: FC<ListingInformation> = ({id = 'Default ID', price = '0.99'}) => {
@@ -112,6 +113,8 @@ const Home: FC<HomeProps> = ({}) => {
                             <ListingCard id={cdata.id} 
                                 price={cdata.price} 
                                 images={cdata.images} 
+                                description={cdata.description}
+                                sellerName={cdata.sellerName}
                             />
                         );
                     })}

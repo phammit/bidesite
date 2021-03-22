@@ -11,4 +11,4 @@ const ProductGalleryMiners: FC<someProps> = ({}) => {
     );
 }
 
-export default ProductGalleryMiners
+export default ProductGalleryMiners;
