@@ -12,9 +12,11 @@ import Box from '@material-ui/core/Box';
 import green from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import EscrowProviderList from '../../components/EscrowProviderList';
+import Rating from '@material-ui/lab/Rating';
 
 
-interface someProps {
+interface ListingProps {
 
 }
 
@@ -53,9 +55,13 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: '#fafafa',
         //margin: '20 0 20',
     },
+    alignText: {
+        textAlign: "left",
+        padding: "3px",
+    }
 }))
 
-const ListingPage: FC<someProps> = ({}) => {
+const ListingPage: FC<ListingProps> = ({}) => {
     const classes= useStyles();
 
     return (
@@ -81,21 +87,27 @@ const ListingPage: FC<someProps> = ({}) => {
                 <Grid container className={classes.container} spacing={3}>
                     <Grid item xs={7} className={classes.container}>
                         <Paper>Product Column Section 1</Paper>
-                        <Grid container justify="center">
+                        <Grid container >
                             <Grid item xs={11} className={classes.addpadding} >
                                 <Paper>Pictures of product with carousol</Paper>
                                 <ImageGallery items={images} showPlayButton={false} showBullets={true} thumbnailPosition="left"
                                     slideOnThumbnailOver={true}/>
                             </Grid>
-                            <Grid item xs={11}>
-                                <Paper>Description of Item</Paper>
+                            <Grid item xs={11} justify="flex-start">
+                                <Paper>Description of Item</Paper><br />
+                                <Card className={classes.alignText}>This is a great starter rig for cryptocurrency mining that will immediately bring in revenue with 1 (one) Nvidia RTX 3070 GPU pre-installed. It will mine 194-208MH/s out of the box with an expandable capacity of up to 600MH/s!<br /><br />
+                                        This rig comes with 2 (two) Nvidia GeForce RTX 3080 GPUs and is set up to expand up to 6.<br /><br />
+                                        Also included is a free setup and technical support session as needed to start earning immediately upon delivery.<br /><br />
+                                        It is fully built and ready to ship.<br /><br />
+                                        Just plug it in and go!<br /><br />
+                                </Card>
                             </Grid>
                         </Grid>
                     </Grid>
                     <Grid item xs={4} className={classes.rightcolumn} >
                         <Paper>Item Information Column</Paper>
                         <Grid container justify="center">
-                            <Grid item xs={10} >
+                            <Grid item xs={12} >
                                 <Card className={classes.box}>
                                     <CardContent>
                                         <Typography variant="h6" 
@@ -131,7 +143,7 @@ const ListingPage: FC<someProps> = ({}) => {
                                     <Box m={2}>   stars   </Box>
                                 </Paper>
                             </Grid>
-                            <Grid item xs={10}>
+                            <Grid item xs={12}>
                                 <Paper>
                                     <Typography variant="h6"
                                         gutterBottom
@@ -145,6 +157,12 @@ const ListingPage: FC<someProps> = ({}) => {
                                         Agent002
                                     </Box>
                                 </Paper>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Paper>
+                                    Escrow Component
+                                </Paper>
+                                <EscrowProviderList />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -186,4 +204,8 @@ const images = [
 
 const listingInformation = {
     
+}
+
+const description = {
+
 }

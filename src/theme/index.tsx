@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import { PaletteType, Theme } from "@material-ui/core";
 import propsFactory from "./props";
 import green from "@material-ui/core/colors/green";
@@ -22,16 +22,17 @@ export const FONT_PROXIMA_NOVA = "proxima-nova, Helvetica, Arial, sans-serif";
 export const FONT_ACUMIN_PRO = "acumin-pro, Arial, Helvetica, sans-serif";
 
 const theme = createMuiTheme({
-  /*typography: {
+  typography: {
     //fontFamily: FONT_BARON_SANS,
-    //htmlFontSize: 12 // default is 14, showing here for easier reading of values, also set in index.css
-  },*/
+    //htmlFontSize: 12, // default is 14, showing here for easier reading of values, also set in index.css
+    htmlFontSize: 18,
+  },
   palette: {
     primary: {
       main: '#90a4ae',
     },
     secondary: {
-      main: yellow[500],
+      main: green[500],
     }
   },
   //spacing: 8,
@@ -45,6 +46,10 @@ const theme = createMuiTheme({
     }
   },
 });
+
+//const them = responsiveFontSizes(theme, {factor: 1});
+
+//theme.spacing(2);
 
 export default theme;
 
